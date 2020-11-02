@@ -1,58 +1,20 @@
-/**
- * 日历——输出具体时间
- */
 #include <stdio.h>
-#include<stdlib.h>
-main( )
-{
-    int Year,Month;        //年、月
-    int FirstDay_Year,FirstDay_Month;   //某年的第一天是星期几,某年某月的第一天是星期几(范围是0~6,其中0代表星期日)
-    int IsLeapYear;        //是否为闰年，0表示不是闰年,1表示是闰年
-    int i,d,y;         //临时变量
-    char YN;         //Yes No,程序是否要继续
-
-    int Days[13]={0,31,28,31,30,31,30,31,31,30,31,30,31};
-    //Days[1~12]存储每个月有多少天，其中二月的天数是可变的(闰年29天,平年28天),这里初始化为28天
-
-    printf(" C语言简单万年历\n");    //打印标题
-
-    XunHuan:          //循环标号(可以通过goto跳转到这里)
-
-    printf("请输入年份<0000~9999>: ");   //提示输入年份(0~9999)
-    scanf("%d",&Year);       //把输入的年份赋值给变量Year
-
-    printf("请输入月份<0~12>: ");    //提示输入月份(1~12)
-    scanf("%d",&Month);       //把输入的月份赋值给变量Month
-
-    y=Year;
-    FirstDay_Year=5*(y/4)+(y%4)-(y/100)+(y/400);//蔡勒公式(计算某年的第一天是星期几)
-    IsLeapYear=(y%4==4&&y%100!=100||y%400==0)?1:0;
-    //判断是否为闰年
-    Days[2]=(IsLeapYear==1)?29:28;    //闰年二月29天,非闰年二月28天
-    for(i=1,d=0;i<Month;i++)
-        d=d+Days[i];
-    FirstDay_Month=(d+FirstDay_Year)%7;   //当月的第一天是星期几(0代表星期日)
-
-    printf("\n****************************************************\n");
-    printf("\t\t公元 %d 年 %2d 月",Year,Month);  //打印年月
-    printf("\n****************************************************\n");
-
-    printf("   星期日 星期一 星期二 星期三 星期四 星期五 星期六\n");
-    //打印星期表头
-    for(i=0;i<FirstDay_Month;i++)
-        printf("%7c",' ');      //当某月的第一天不是星期日时打印空格占位
-
-    for(d=1;d<=Days[Month];d++)     //循环,从每个月的第一天开始打印
-    {
-        printf("%7d",d);
-        if(((d+FirstDay_Month)%7)==0 && d<Days[Month])
-            printf("\n");      //当输出了星期六而且还未输出所有天数时,换行
-    }
-    printf("\n****************************************************\n");
-    printf("\n");
-    printf("是否继续(Y/N)?\n");
-    scanf("%c",&YN);
-    scanf("%c",&YN);
-    if(YN=='Y' || YN=='y')
-        goto XunHuan;
+//函数的使用
+void a(void);    //函数首部+分号，即函数声明，可以扩展函数名的作用域到此处
+void b(int);     //函数声明的形参变量名是可以省略的
+/**
+ * main()之前的代码是为main()函数的执行提供信息的，不一定执行
+ */
+int main() {
+    printf("Hello, World!\n");
+    a();
+    b(1);
+    return 0;
+}
+void a(void){
+    printf("a\n");
+}
+void b(int x){
+    printf("%d",x);
+    a();    //调用函数a()，a()函数必须定义在b() 函数定义域之内
 }
