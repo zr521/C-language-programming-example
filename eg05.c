@@ -2,13 +2,13 @@
 // Created by ZRZQ on 2020/11/5.
 //
 /**
- * ÓÅÏÈµÈ¼¶²¢²»ÍêÈ«¾ö¶¨ÔËËãË³Ðò
- *      Ö»ÓÐ&& || ¶ººÅ£¬Ìõ¼þÔËËã·û£¬¹æ¶¨ÁËÔËËãË³Ðò£¬±ØÐë×Ô×óÍùÓÒ
- * ÒÔÏÂÔËËã·û½áºÏ·½Ïò£º×ÔÓÒÏò×ó
+ * ä¼˜å…ˆç­‰çº§å¹¶ä¸å®Œå…¨å†³å®šè¿ç®—é¡ºåº
+ *      åªæœ‰&& || é€—å·ï¼Œæ¡ä»¶è¿ç®—ç¬¦ï¼Œè§„å®šäº†è¿ç®—é¡ºåºï¼Œå¿…é¡»è‡ªå·¦å¾€å³
+ * ä»¥ä¸‹è¿ç®—ç¬¦ç»“åˆæ–¹å‘ï¼šè‡ªå³å‘å·¦
  * {
- *      µ¥Ä¿ÔËËã·û£¨£¡¡¢~¡¢++¡¢--¡¢-£¨¸ººÅ£©¡¢*£¨Ö¸Õë£©¡¢&£¨È¡µØÖ·ÔËËã·û£©¡¢sizeof£¨³¤¶ÈÔËËã·û£©£©
- *      Ìõ¼þÔËËã·û £¿:
- *      ¸³ÖµÔËËã·û
+ *      å•ç›®è¿ç®—ç¬¦ï¼ˆï¼ã€~ã€++ã€--ã€-ï¼ˆè´Ÿå·ï¼‰ã€*ï¼ˆæŒ‡é’ˆï¼‰ã€&ï¼ˆå–åœ°å€è¿ç®—ç¬¦ï¼‰ã€sizeofï¼ˆé•¿åº¦è¿ç®—ç¬¦ï¼‰ï¼‰
+ *      æ¡ä»¶è¿ç®—ç¬¦ ï¼Ÿ:
+ *      èµ‹å€¼è¿ç®—ç¬¦
  * }
  */
 #include <stdio.h>
@@ -20,86 +20,87 @@ void ee();
 int ff();
 
 int main() {
-    //¸ººÅÔËËã·û
-    printf("¸ººÅÔËËã·û£º%d\n",4*-3);//¸ººÅÓÅÏÈ¼¶´óÓÚ³ËºÅ
-    //ËãÊõÔËËã·û£¨×Ô×óÍùÓÒ£©
+    //è´Ÿå·è¿ç®—ç¬¦
+    printf("è´Ÿå·è¿ç®—ç¬¦ï¼š%d\n",4*-3);//è´Ÿå·ä¼˜å…ˆçº§å¤§äºŽä¹˜å·
+    //ç®—æœ¯è¿ç®—ç¬¦ï¼ˆè‡ªå·¦å¾€å³ï¼‰
     printf("%d,%lf\n",5/2,5.0/2);
     int a=3.33;
-    printf("%d\n",a);//¸¡µãÊý¸³Öµ¸øÕûÐÎÊý£¬Ê¡ÂÔÐ¡Êý²¿·Ö
+    printf("%d\n",a);//æµ®ç‚¹æ•°èµ‹å€¼ç»™æ•´å½¢æ•°ï¼Œçœç•¥å°æ•°éƒ¨åˆ†
 
-    //¸ºÕûÊýÈ¡Óà£¨ÒìºÅ È¡¸ººÅ£¬13%3=4¡¢-13-£¨-4*3£©=-1£¬13-£¨-4*-3£©=1£¬13%23=0¡¢-13-£¨-0£©=-13£©
-    printf("¸ºÕûÊýÈ¡Óà£º%d,%d,%d\n",-13%3,13%-3,-13%23);
-    //¼ì²â¸³Öµ±í´ïÊ½ÊÇÒ»¸ö³£Êý»¹ÊÇ×óÖµ(×óÖµ¾ÍÊÇÔÚ¸³ÖµÖÐ¿ÉÒÔ·ÅÔÚ¸³Öµ²Ù×÷·ûÁ½±ßµÄÖµ)
+    //è´Ÿæ•´æ•°å–ä½™ï¼ˆå¼‚å· å–è´Ÿå·ï¼Œ13%3=4ã€-13-ï¼ˆ-4*3ï¼‰=-1ï¼Œ13-ï¼ˆ-4*-3ï¼‰=1ï¼Œ13%23=0ã€-13-ï¼ˆ-0ï¼‰=-13ï¼‰
+    printf("è´Ÿæ•´æ•°å–ä½™ï¼š%d,%d,%d\n",-13%3,13%-3,-13%23);
+    //æ£€æµ‹èµ‹å€¼è¡¨è¾¾å¼æ˜¯ä¸€ä¸ªå¸¸æ•°è¿˜æ˜¯å·¦å€¼(å·¦å€¼å°±æ˜¯åœ¨èµ‹å€¼ä¸­å¯ä»¥æ”¾åœ¨èµ‹å€¼æ“ä½œç¬¦ä¸¤è¾¹çš„å€¼)
     int b=1,c=2,d=3;
     // printf("%d\n",(b=c)=d);
-    //¶ººÅ±í´ïÊ½£º×Ô×óÍùÓÒÔËËã£¬È¡ÓÒ±ßÖµ
+    //é€—å·è¡¨è¾¾å¼ï¼šè‡ªå·¦å¾€å³è¿ç®—ï¼Œå–å³è¾¹å€¼
     aa();
-    //Ìõ¼þ±í´ïÊ½×Ô×óÍùÓÒÔËËã
+    //æ¡ä»¶è¡¨è¾¾å¼è‡ªå·¦å¾€å³è¿ç®—
     bb();
-    //×ÔÔöÔËËã·û
+    //è‡ªå¢žè¿ç®—ç¬¦
     cc();
-    //Ç¿ÖÆÔËËã·û
+    //å¼ºåˆ¶è¿ç®—ç¬¦
     dd();
-    //Âß¼­
+    //é€»è¾‘
     ee();
     //sizeof
     ff();
     return 0;
 }
-//¶ººÅÔËËã·û
+//é€—å·è¿ç®—ç¬¦
 int aa(void){
     int a, b, c;
     b = 2;
     c = 3;
     a = (b + 1, c + 2);
-    printf("¶ººÅÔËËã·û£º%d\n", a);        //×Ô×óÍùÓÒÔËËã£¬È¡ÓÒ±ßÖµ
-    //ÔËËãË³ÐòºÍÓÅÏÈµÈ¼¶±È½Ï¡¢±ØÐë×Ô×óÍùÓÒ
+    printf("é€—å·è¿ç®—ç¬¦ï¼š%d\n", a);        //è‡ªå·¦å¾€å³è¿ç®—ï¼Œå–å³è¾¹å€¼
+    //è¿ç®—é¡ºåºå’Œä¼˜å…ˆç­‰çº§æ¯”è¾ƒã€å¿…é¡»è‡ªå·¦å¾€å³
     int x=0;
     x+=2,(x*=2);
-    printf("ÔËËãË³Ðò£º%d\n",x);
+    printf("è¿ç®—é¡ºåºï¼š%d\n",x);
 }
-//Ìõ¼þ±í´ïÊ½
+//æ¡ä»¶è¡¨è¾¾å¼
 int bb(void){
     int x = 2 ,y = 3,max=0;
-    printf("Ìõ¼þ±í´ïÊ½£º\n");
+    printf("æ¡ä»¶è¡¨è¾¾å¼ï¼š\n");
 
     x>y ? (max=x) : (max=y);
-    printf("%d\n",max);     //±í´ïÊ½2¡¢3¿ÉÒÔÊÇÊýÖµ±í´ïÊ½£¬»¹¿ÉÒÔÊÇ¸³Öµ¡¢º¯Êý±í´ïÊ½
+    printf("%d\n",max);     //è¡¨è¾¾å¼2ã€3å¯ä»¥æ˜¯æ•°å€¼è¡¨è¾¾å¼ï¼Œè¿˜å¯ä»¥æ˜¯èµ‹å€¼ã€å‡½æ•°è¡¨è¾¾å¼
     x>y ? printf("%d\n",x) : printf("%d\n",y);
 
     int x1=0;
     0 ? (x1 += 2) : 2;
-    printf("Ìõ¼þÔËËã·ûÖ´ÐÐË³Ðò£º%d\n",x1);
+    printf("æ¡ä»¶è¿ç®—ç¬¦æ‰§è¡Œé¡ºåºï¼š%d\n",x1);
 }
-//×ÔÔö×Ô¼õ-³£ÓÃÓÚÑ­»·±äÁ¿£¬Ö¸Õë±äÁ¿
+//è‡ªå¢žè‡ªå‡-å¸¸ç”¨äºŽå¾ªçŽ¯å˜é‡ï¼ŒæŒ‡é’ˆå˜é‡
 int cc(void){
-    int x=3,y=3;
-    printf("×ÔÔöÔËËã·û£º\n");
-    printf("%d\n",++x);     //Ê¹ÓÃxÖ®Ç°,xÏÈ¼Ó1
-    printf("%d\n",y++);     //Ê¹ÓÃyÖ®ºó£¬y¼Ó1
+    int x=3,y1,y2;
+    y1=x++;//åŽç½®++ï¼Œå…ˆä½¿ç”¨ï¼Œåœ¨è‡ªå¢ž
+    y2=++x;//å‰ç½®++ï¼Œå…ˆè‡ªå¢žï¼Œåœ¨ä½¿ç”¨
+    printf("è‡ªå¢žè¿ç®—ç¬¦ï¼š\n");
+    printf("x=%d,y1=%d,y2=%d\n",x,y1,y2);   
 }
-//Ç¿ÖÆ×ª»»
+//å¼ºåˆ¶è½¬æ¢
 int dd(void){
     float x=3.55;
     int y;
-    //£¨int£©x+yÖ»×ª»»x,int£¨x+y£©
-    y = (int)x;     //xµÄÖµºÍÀàÐÍ²¢Î´·¢Éú¸Ä±ä£¬¸ÃÁÙÊ±Öµ¸³Öµºó²»´æÔÚ
-    printf("Ç¿ÖÆ×ª»»£»%d\n",y);
+    //ï¼ˆintï¼‰x+yåªè½¬æ¢x,intï¼ˆx+yï¼‰
+    y = (int)x;     //xçš„å€¼å’Œç±»åž‹å¹¶æœªå‘ç”Ÿæ”¹å˜ï¼Œè¯¥ä¸´æ—¶å€¼èµ‹å€¼åŽä¸å­˜åœ¨
+    printf("å¼ºåˆ¶è½¬æ¢ï¼›%d\n",y);
 }
-//ÔËËãË³Ðò£¬±ØÐë×Ô×óÍùÓÒ
+//è¿ç®—é¡ºåºï¼Œå¿…é¡»è‡ªå·¦å¾€å³
 void ee(){
     int x=2,y=3;
     int a=2,b=3;
-    printf("Âß¼­ÔËËã·û£º%d\n",((x==a) || (y==b)));        //¿ÉÐ´³É(x==a || y==b)
-    printf("%d\n",((x>y) && (a<b)));        //¿ÉÐ´³É( x>y && a<b)
+    printf("é€»è¾‘è¿ç®—ç¬¦ï¼š%d\n",((x==a) || (y==b)));        //å¯å†™æˆ(x==a || y==b)
+    printf("%d\n",((x>y) && (a<b)));        //å¯å†™æˆ( x>y && a<b)
 }
 //sizeof()
 int ff(){
     int x=10;
     int a[] = {1,2,3,4,5,6};
-    printf("sizeofÔËËã·û£º\n");
-    printf("±äÁ¿´óÐ¡£º%d\n", sizeof(x));
-    printf("ÀàÐÍ´óÐ¡:%d\n", sizeof(int));
-    printf("Êý×é´óÐ¡£º%d\n", sizeof(a));
-    printf("Êý×é³¤¶È£º%d\n", sizeof(a)/ sizeof(a[0]));//ÀûÓÃsizeofÇóÊý×é³¤¶È
+    printf("sizeofè¿ç®—ç¬¦ï¼š\n");
+    printf("å˜é‡å¤§å°ï¼š%d\n", sizeof(x));
+    printf("ç±»åž‹å¤§å°:%d\n", sizeof(int));
+    printf("æ•°ç»„å¤§å°ï¼š%d\n", sizeof(a));
+    printf("æ•°ç»„é•¿åº¦ï¼š%d\n", sizeof(a)/ sizeof(a[0]));//åˆ©ç”¨sizeofæ±‚æ•°ç»„é•¿åº¦
 }
