@@ -22,8 +22,7 @@ int ff();
 int main() {
     //负号运算符
     printf("负号运算符：%d\n",4*-3);//负号优先级大于乘号
-    //算术运算符（自左往右）
-    printf("%d,%lf\n",5/2,5.0/2);
+    printf("%d,%lf\n",5/2,5.0/2);//算术运算符（自左往右）
     int a=3.33;
     printf("%d\n",a);//浮点数赋值给整形数，省略小数部分
 
@@ -33,7 +32,7 @@ int main() {
     int b=1,c=2,d=3;
     // printf("%d\n",(b=c)=d);
     //逗号表达式：自左往右运算，取右边值
-    aa();
+    aa();// ()-函数调用操作符
     //条件表达式自左往右运算
     bb();
     //自增运算符
@@ -62,7 +61,7 @@ int aa(void){
 int bb(void){
     int x = 2 ,y = 3,max=0;
     printf("条件表达式：\n");
-
+    //exp1 ?exp2 : exp3 ;
     x>y ? (max=x) : (max=y);
     printf("%d\n",max);     //表达式2、3可以是数值表达式，还可以是赋值、函数表达式
     x>y ? printf("%d\n",x) : printf("%d\n",y);
@@ -87,17 +86,20 @@ int dd(void){
     y = (int)x;     //x的值和类型并未发生改变，该临时值赋值后不存在
     printf("强制转换；%d\n",y);
 }
-//运算顺序，必须自左往右
+//&& || 运算顺序，必须自左往右
 void ee(){
+    //真 -非0
+    //假 -0
     int x=2,y=3;
     int a=2,b=3;
-    printf("逻辑运算符：%d\n",((x==a) || (y==b)));        //可写成(x==a || y==b)
+    printf("逻辑运算符\n")
+    printf("%d\n",((x==a) || (y==b)));        //可写成(x==a || y==b)
     printf("%d\n",((x>y) && (a<b)));        //可写成( x>y && a<b)
 }
 //sizeof()
 int ff(){
     int x=10;
-    int a[] = {1,2,3,4,5,6};
+    int a[] = {1,2,3,4,5,6};//[] 下标引用操作符
     printf("sizeof运算符：\n");
     printf("变量大小：%d\n", sizeof(x));
     printf("类型大小:%d\n", sizeof(int));
